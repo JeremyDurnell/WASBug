@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceReference>
+	<ProxyGenerationParameters
+		ServiceReferenceUri="http://localhost/WASHost/HelloIndigoService.svc"
+		Name="localhost"
+		NotifyPropertyChange="True"
+		UseObservableCollection="False">
+	</ProxyGenerationParameters>
+	<EndPoints>
+		<EndPoint
+			Address="net.pipe://mlbvista/WASHost/HelloIndigoService.svc/netPipe"
+			BindingConfiguration="NetNamedPipeBinding_IHelloIndigoService"
+			Contract="Client.localhost.IHelloIndigoService"
+			>
+		</EndPoint>
+		<EndPoint
+			Address="net.tcp://mlbvista:9000/WASHost/HelloIndigoService.svc/netTcp"
+			BindingConfiguration="NetTcpBinding_IHelloIndigoService"
+			Contract="Client.localhost.IHelloIndigoService"
+			>
+		</EndPoint>
+		<EndPoint
+			Address="http://mlbvista/WASHost/HelloIndigoService.svc/basicHttp"
+			BindingConfiguration="BasicHttpBinding_IHelloIndigoService"
+			Contract="Client.localhost.IHelloIndigoService"
+			>
+		</EndPoint>
+		<EndPoint
+			Address="http://mlbvista/WASHost/HelloIndigoService.svc/wsHttp"
+			BindingConfiguration="WSHttpBinding_IHelloIndigoService"
+			Contract="Client.localhost.IHelloIndigoService"
+			>
+		</EndPoint>
+	</EndPoints>
+</ServiceReference>
